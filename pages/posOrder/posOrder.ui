@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1160</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 243, 243);</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>40</y>
+     <width>1161</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #121212</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>135</width>
+      <height>102</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #D4A26F</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>6</y>
+       <width>98</width>
+       <height>90</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/imagens/cGUFyIrl2tqx3cWHufs9--1--5d252-svg (1) 4.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>4</y>
+      <width>281</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #F8E6D3</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;D.W Coffee&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_3">
+   <property name="geometry">
+    <rect>
+     <x>309</x>
+     <y>260</y>
+     <width>541</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #F6F6F6;
+border: .5px solid rgba(0,0,0,.4);
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>79</x>
+      <y>70</y>
+      <width>59</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	image: url(:/imagens/istockphoto-1313175215-612x612-removebg-preview (1) 2.png);
+	border-color: transparent;
+	padding: 7px;
+	font-size: 13px;
+	font-weight: 500;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	background-color: rgba(61, 21, 21, .75);
+	padding:  9px;
+}
+
+QLabel:hover{
+	background-color: rgba(61, 21, 21, 1);
+	
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>137</x>
+      <y>70</y>
+      <width>107</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: rgba(61,21,21,.75);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 7px;
+	padding-left:20px;
+	font-size: 13px;
+	font-weight: 500;
+	text-align: left;
+	color: white;
+	font-weight: 800;
+	font-size: 18px;
+	border-color: transparent;
+}
+
+QPushButton:hover{
+	background-color: rgba(61,21,21,1);
+	color: white;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>PROOF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>70</y>
+      <width>59</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	image: url(:/imagens/image-removebg-preview 2.png);
+	background-color: rgba(212,162,111,.75);
+	padding: 7px;
+	font-size: 13px;
+	font-weight: 500;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border: transparent;
+	padding: 13px;
+}
+
+QLabel:hover{
+	background-color: rgba(212,162,111,1);
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>353</x>
+      <y>70</y>
+      <width>107</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: rgba(212,162,111,.75);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding-left: 7px;
+	font-size: 14px;
+	font-weight: 500;
+	text-align: left;
+	color: white;
+	font-weight: 800;
+	font-size: 15px;
+	border: tranparent;
+}
+
+QPushButton:hover{
+	background-color: rgba(212,162,111,1);
+	color: white;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>TAX INVOICE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>81</x>
+      <y>157</y>
+      <width>59</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	image: url(:/imagens/flat-icon-in-black-and-white-style-shelf-vector-10667669-removebg-preview 2.png);
+	background-color: rgba(212,162,111,.75);
+	padding: 7px;
+	font-size: 13px;
+	font-weight: 500;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border: transparent;
+	padding: 10px
+}
+
+QLabel:hover{
+	background-color: rgba(212,162,111,1);
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>139</x>
+      <y>157</y>
+      <width>107</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: rgba(212,162,111,.75);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding-left: 7px;
+	font-size: 13px;
+	font-weight: 500;
+	text-align: left;
+	color: white;
+	font-weight: 800;
+	border: tranparent;
+}
+
+QPushButton:hover{
+	background-color: rgba(212,162,111,1);
+	color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string>SHELVE ORDER</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>353</x>
+      <y>156</y>
+      <width>107</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: rgba(61,21,21,.75);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding-left:7px;
+	font-weight: 500;
+	text-align: left;
+	color: white;
+	font-weight: 800;
+	font-size: 15px;
+	border-color: transparent;
+}
+
+QPushButton:hover{
+	background-color: rgba(61,21,21,1);
+	color: white;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>NEW ORDER</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>156</y>
+      <width>59</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	image: url(:/imagens/istockphoto-688550958-612x612 2.png);
+	border-color: transparent;
+	padding: 7px;
+	font-size: 13px;
+	font-weight: 500;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	background-color: rgba(61, 21, 21, .75);
+	padding: 10px;
+}
+
+QLabel:hover{
+	background-color: rgba(61, 21, 21, 1);
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>172</x>
+      <y>251</y>
+      <width>181</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: rgba(118,0,0,.75);
+	border-radius: 5px;
+	font-size: 13px;
+	font-weight: 500;
+	color: white;
+	font-weight: 800;
+	font-size: 18px;
+}
+
+QPushButton:hover{
+	background-color: rgba(118,0,0,1);
+	color: white;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>RETURN</string>
+    </property>
+   </widget>
+   <zorder>pushButton_2</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_7</zorder>
+   <zorder>pushButton_4</zorder>
+   <zorder>label_9</zorder>
+   <zorder>pushButton_5</zorder>
+   <zorder>pushButton_6</zorder>
+   <zorder>label_11</zorder>
+   <zorder>pushButton_7</zorder>
+  </widget>
+  <widget class="QFrame" name="frame_4">
+   <property name="geometry">
+    <rect>
+     <x>309</x>
+     <y>210</y>
+     <width>241</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+border-left: .5px solid rgba(0,0,0,.4);
+border-top: .5px solid rgba(0,0,0,.4);
+border-right: .5px solid rgba(0,0,0,.4);
+border-bottom: .5px solid rgba(0,0,0,.2);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>19</x>
+      <y>18</y>
+      <width>56</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: transparent;
+font-size: 17px</string>
+    </property>
+    <property name="text">
+     <string>Client:</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../imagens/imagens.qrc"/>
+ </resources>
+ <connections/>
+</ui>
