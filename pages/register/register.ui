@@ -367,9 +367,9 @@ border-bottom-color: transparent;</string>
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>74</x>
+       <x>99</x>
        <y>4</y>
-       <width>290</width>
+       <width>220</width>
        <height>73</height>
       </rect>
      </property>
@@ -383,29 +383,11 @@ border-color: transparent</string>
      </property>
     </widget>
    </widget>
-   <widget class="QLabel" name="label_9">
-    <property name="geometry">
-     <rect>
-      <x>38</x>
-      <y>94</y>
-      <width>140</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-color: transparent;
-font-size: 18px;
-font-weight: 800;</string>
-    </property>
-    <property name="text">
-     <string>Type User</string>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="lineEdit_5">
     <property name="geometry">
      <rect>
       <x>47</x>
-      <y>206</y>
+      <y>139</y>
       <width>339</width>
       <height>33</height>
      </rect>
@@ -430,7 +412,7 @@ QLineEdit:hover{
     <property name="geometry">
      <rect>
       <x>42</x>
-      <y>172</y>
+      <y>105</y>
       <width>96</width>
       <height>31</height>
      </rect>
@@ -448,7 +430,7 @@ font-weight: 800;</string>
     <property name="geometry">
      <rect>
       <x>48</x>
-      <y>283</y>
+      <y>221</y>
       <width>339</width>
       <height>33</height>
      </rect>
@@ -472,7 +454,7 @@ QLineEdit:hover{
     <property name="geometry">
      <rect>
       <x>45</x>
-      <y>326</y>
+      <y>270</y>
       <width>160</width>
       <height>31</height>
      </rect>
@@ -491,7 +473,7 @@ font-weight: 800;
     <property name="geometry">
      <rect>
       <x>43</x>
-      <y>248</y>
+      <y>186</y>
       <width>140</width>
       <height>31</height>
      </rect>
@@ -509,7 +491,7 @@ font-weight: 800;</string>
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>360</y>
+      <y>304</y>
       <width>339</width>
       <height>33</height>
      </rect>
@@ -530,43 +512,11 @@ QLineEdit:hover{
      <string>Confirm your password here</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>130</y>
-      <width>330</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QComboBox{
-	border-radius: 5px;
-	background-color: #F6F6F6;
-	padding-left: 15px;
-}
-
-
-QComboBox:hover{
-	border: .5px solid rgba(0, 0, 0, 1);
-}</string>
-    </property>
-    <item>
-     <property name="text">
-      <string>Administrador</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Usuario</string>
-     </property>
-    </item>
-   </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
       <x>137</x>
-      <y>427</y>
+      <y>409</y>
       <width>160</width>
       <height>44</height>
      </rect>
@@ -601,8 +551,8 @@ QPushButton:hover{
    <widget class="QLabel" name="label_13">
     <property name="geometry">
      <rect>
-      <x>52</x>
-      <y>396</y>
+      <x>54</x>
+      <y>350</y>
       <width>44</width>
       <height>25</height>
      </rect>
@@ -629,29 +579,31 @@ QLabel:hover{
      <string>LOGIN</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_14">
+   <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>183</x>
-      <y>472</y>
-      <width>64</width>
-      <height>31</height>
+      <x>180</x>
+      <y>460</y>
+      <width>70</width>
+      <height>27</height>
      </rect>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLabel{
+     <string notr="true">QPushButton{
 	border-color: transparent;
+	background-color: transparent;
+	font-weight: bold;
 	font-size: 14px;
-	font-weight: 800;
 }
 
-
-QLabel:hover{
+QPushButton:hover{
 	color: rgba(61, 21, 21, .75);
-}</string>
+}
+
+</string>
     </property>
     <property name="text">
      <string>RETURN</string>
@@ -693,7 +645,7 @@ QPushButton:hover{
   </widget>
  </widget>
  <resources>
-  <include location="../../imagens/imagens.qrc"/>
+  <include location="../../images/imagens.qrc"/>
  </resources>
  <connections/>
 </ui>

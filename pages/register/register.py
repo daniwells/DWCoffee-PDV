@@ -15,9 +15,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QDialog, QFrame,
-    QLabel, QLineEdit, QPushButton, QSizePolicy,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QDialog, QFrame, QLabel,
+    QLineEdit, QPushButton, QSizePolicy, QWidget)
 import images
 
 class Ui_Dialog(object):
@@ -156,19 +155,13 @@ class Ui_Dialog(object):
         self.frame_8.setFrameShadow(QFrame.Raised)
         self.label_8 = QLabel(self.frame_8)
         self.label_8.setObjectName(u"label_8")
-        self.label_8.setGeometry(QRect(74, 4, 290, 73))
+        self.label_8.setGeometry(QRect(99, 4, 220, 73))
         self.label_8.setStyleSheet(u"color: white;\n"
 "font-weight: bold;\n"
 "border-color: transparent")
-        self.label_9 = QLabel(self.frame_7)
-        self.label_9.setObjectName(u"label_9")
-        self.label_9.setGeometry(QRect(38, 94, 140, 31))
-        self.label_9.setStyleSheet(u"border-color: transparent;\n"
-"font-size: 18px;\n"
-"font-weight: 800;")
         self.lineEdit_5 = QLineEdit(self.frame_7)
         self.lineEdit_5.setObjectName(u"lineEdit_5")
-        self.lineEdit_5.setGeometry(QRect(47, 206, 339, 33))
+        self.lineEdit_5.setGeometry(QRect(47, 139, 339, 33))
         self.lineEdit_5.setStyleSheet(u"QLineEdit{\n"
 "	border-radius: 5px;\n"
 "	background-color: #F6F6F6;\n"
@@ -181,13 +174,13 @@ class Ui_Dialog(object):
 "}")
         self.label_10 = QLabel(self.frame_7)
         self.label_10.setObjectName(u"label_10")
-        self.label_10.setGeometry(QRect(42, 172, 96, 31))
+        self.label_10.setGeometry(QRect(42, 105, 96, 31))
         self.label_10.setStyleSheet(u"border-color: transparent;\n"
 "font-size: 18px;\n"
 "font-weight: 800;")
         self.lineEdit_6 = QLineEdit(self.frame_7)
         self.lineEdit_6.setObjectName(u"lineEdit_6")
-        self.lineEdit_6.setGeometry(QRect(48, 283, 339, 33))
+        self.lineEdit_6.setGeometry(QRect(48, 221, 339, 33))
         self.lineEdit_6.setStyleSheet(u"QLineEdit{\n"
 "	border-radius: 5px;\n"
 "	background-color: #F6F6F6;\n"
@@ -199,20 +192,20 @@ class Ui_Dialog(object):
 "}")
         self.label_11 = QLabel(self.frame_7)
         self.label_11.setObjectName(u"label_11")
-        self.label_11.setGeometry(QRect(45, 326, 160, 31))
+        self.label_11.setGeometry(QRect(45, 270, 160, 31))
         self.label_11.setStyleSheet(u"border-color: transparent;\n"
 "font-size: 18px;\n"
 "font-weight: 800;\n"
 "")
         self.label_12 = QLabel(self.frame_7)
         self.label_12.setObjectName(u"label_12")
-        self.label_12.setGeometry(QRect(43, 248, 140, 31))
+        self.label_12.setGeometry(QRect(43, 186, 140, 31))
         self.label_12.setStyleSheet(u"border-color: transparent;\n"
 "font-size: 18px;\n"
 "font-weight: 800;")
         self.lineEdit_7 = QLineEdit(self.frame_7)
         self.lineEdit_7.setObjectName(u"lineEdit_7")
-        self.lineEdit_7.setGeometry(QRect(50, 360, 339, 33))
+        self.lineEdit_7.setGeometry(QRect(50, 304, 339, 33))
         self.lineEdit_7.setStyleSheet(u"QLineEdit{\n"
 "	border-radius: 5px;\n"
 "	background-color: #F6F6F6;\n"
@@ -223,24 +216,9 @@ class Ui_Dialog(object):
 "QLineEdit:hover{\n"
 "	border: .5px solid rgba(0, 0, 0, 1);\n"
 "}")
-        self.comboBox = QComboBox(self.frame_7)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
-        self.comboBox.setGeometry(QRect(50, 130, 330, 30))
-        self.comboBox.setStyleSheet(u"QComboBox{\n"
-"	border-radius: 5px;\n"
-"	background-color: #F6F6F6;\n"
-"	padding-left: 15px;\n"
-"}\n"
-"\n"
-"\n"
-"QComboBox:hover{\n"
-"	border: .5px solid rgba(0, 0, 0, 1);\n"
-"}")
         self.pushButton_2 = QPushButton(self.frame_7)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setGeometry(QRect(137, 427, 160, 44))
+        self.pushButton_2.setGeometry(QRect(137, 409, 160, 44))
         self.pushButton_2.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_2.setStyleSheet(u"QPushButton{\n"
 "	border-color: transparent;\n"
@@ -262,7 +240,7 @@ class Ui_Dialog(object):
 "")
         self.label_13 = QLabel(self.frame_7)
         self.label_13.setObjectName(u"label_13")
-        self.label_13.setGeometry(QRect(52, 396, 44, 25))
+        self.label_13.setGeometry(QRect(54, 350, 44, 25))
         self.label_13.setCursor(QCursor(Qt.PointingHandCursor))
         self.label_13.setStyleSheet(u"QLabel{\n"
 "	border-color: transparent;\n"
@@ -277,20 +255,22 @@ class Ui_Dialog(object):
 "	border-bottom-color: rgba(61, 21, 21, .75);  \n"
 "}\n"
 "")
-        self.label_14 = QLabel(self.frame_7)
-        self.label_14.setObjectName(u"label_14")
-        self.label_14.setGeometry(QRect(183, 472, 64, 31))
-        self.label_14.setCursor(QCursor(Qt.PointingHandCursor))
-        self.label_14.setStyleSheet(u"QLabel{\n"
+        self.pushButton_3 = QPushButton(self.frame_7)
+        self.pushButton_3.setObjectName(u"pushButton_3")
+        self.pushButton_3.setGeometry(QRect(180, 460, 70, 27))
+        self.pushButton_3.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_3.setStyleSheet(u"QPushButton{\n"
 "	border-color: transparent;\n"
+"	background-color: transparent;\n"
+"	font-weight: bold;\n"
 "	font-size: 14px;\n"
-"	font-weight: 800;\n"
 "}\n"
 "\n"
-"\n"
-"QLabel:hover{\n"
+"QPushButton:hover{\n"
 "	color: rgba(61, 21, 21, .75);\n"
-"}")
+"}\n"
+"\n"
+"")
         self.pushButton = QPushButton(Dialog)
         self.pushButton.setObjectName(u"pushButton")
         self.pushButton.setGeometry(QRect(186, 669, 321, 40))
@@ -329,19 +309,15 @@ class Ui_Dialog(object):
         self.label_7.setText(QCoreApplication.translate("Dialog", u"cnpj", None))
         self.lineEdit_3.setPlaceholderText(QCoreApplication.translate("Dialog", u"Type it your company here", None))
         self.label_8.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:22pt;\">REGISTER USER</span></p></body></html>", None))
-        self.label_9.setText(QCoreApplication.translate("Dialog", u"Type User", None))
         self.lineEdit_5.setPlaceholderText(QCoreApplication.translate("Dialog", u"Type it your username here", None))
         self.label_10.setText(QCoreApplication.translate("Dialog", u"Username", None))
         self.lineEdit_6.setPlaceholderText(QCoreApplication.translate("Dialog", u"Type it your password here", None))
         self.label_11.setText(QCoreApplication.translate("Dialog", u"Confirm Password", None))
         self.label_12.setText(QCoreApplication.translate("Dialog", u"Password", None))
         self.lineEdit_7.setPlaceholderText(QCoreApplication.translate("Dialog", u"Confirm your password here", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("Dialog", u"Administrador", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("Dialog", u"Usuario", None))
-
         self.pushButton_2.setText(QCoreApplication.translate("Dialog", u"REGISTER", None))
         self.label_13.setText(QCoreApplication.translate("Dialog", u"LOGIN", None))
-        self.label_14.setText(QCoreApplication.translate("Dialog", u"RETURN", None))
+        self.pushButton_3.setText(QCoreApplication.translate("Dialog", u"RETURN", None))
         self.pushButton.setText(QCoreApplication.translate("Dialog", u"CONFIRM", None))
     # retranslateUi
 

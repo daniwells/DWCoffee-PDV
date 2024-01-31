@@ -854,7 +854,7 @@ font-weight: bold;</string>
   <zorder>frame_15</zorder>
  </widget>
  <resources>
-  <include location="../../imagens/imagens.qrc"/>
+  <include location="../../images/imagens.qrc"/>
  </resources>
  <connections/>
 </ui>

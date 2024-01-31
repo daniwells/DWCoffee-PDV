@@ -31,11 +31,46 @@ class Register(QMainWindow, register.Ui_Dialog):
         super(Register, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("Register")
-        self.pushButton.clicked.connect(self.register_finish)  
+        self.pushButton_2.clicked.connect(self.register_finish)  
 
     def register_finish(self):
+        self.register_user()
         self.close()        
         order.show()
+
+
+    def register_user(self):
+        db = Database()
+        db.connect()
+
+        
+        type_user = 'comum_user'
+        if self.lineEdit_5.text() == "admim" and self.lineEdit_6.text() == "admin":
+            type_user = "admin"
+
+        fullDataSet = (
+            self.lineEdit_5.text(), self.lineEdit.text(), self.lineEdit_2.text(), self.lineEdit_6.text(), type_user
+        )
+
+        response = db.register_user(fullDataSet)
+
+        if response == "DEU BOM!!":
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setWindowTitle("Cadastro Realizado")
+            msg.setText("Cadastro Realizado com sucesso")
+            msg.exec()
+            db.close_connection()
+            return
+        else:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Critical)
+            msg.setWindowTitle("Erro")
+            msg.setText("Erro ao cadastrar, verifique se as informações foram preenchidadas corretamente!")
+            msg.exec()
+            db.close_connection()
+            return
+
 
 class MainWindow(QMainWindow, initial.Ui_Dialog):
     def __init__(self):
@@ -59,17 +94,13 @@ class MainWindow(QMainWindow, initial.Ui_Dialog):
 
 
 #############################  CRUD FUNCTIONS  #############################
-        
-def register_coffee(self):
+
+if __name__ == "__main__":
     db = Database()
     db.connect()
+    db.create_table_users()
+    db.close_connection()
 
-    fullDataSet = {
-        self.
-    }
-
-
-if __name__ == "__main__":   
     app = QApplication(sys.argv)
     window = MainWindow()
     login = Login()
@@ -78,3 +109,8 @@ if __name__ == "__main__":
 
     window.show()
     app.exec()
+
+
+
+ 
+ 
