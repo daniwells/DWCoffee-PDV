@@ -18,7 +18,6 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QComboBox, QDialog, QFrame,
     QLabel, QPushButton, QScrollArea, QScrollBar,
     QSizePolicy, QVBoxLayout, QWidget)
-
 import images
 
 class Ui_Dialog(object):
@@ -26,7 +25,7 @@ class Ui_Dialog(object):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
         Dialog.resize(1160, 768)
-        Dialog.setStyleSheet(u"background-color: rgb(250, 233, 234);")
+        Dialog.setStyleSheet(u"background-color: #F3F3F3;")
         self.frame_2 = QFrame(Dialog)
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setGeometry(QRect(0, 190, 1161, 581))
@@ -89,7 +88,7 @@ class Ui_Dialog(object):
 "	border: .5px solid rgba(0,0,0,.5);\n"
 "	border-radius: 5px;\n"
 "	padding: 10px;\n"
-"	background-color: rgb(250, 233, 234);\n"
+"	background-color: #F3F3F3;\n"
 "}\n"
 "\n"
 "QComboBox:hover{\n"
@@ -265,7 +264,7 @@ class Ui_Dialog(object):
         self.frame_21 = QFrame(self.frame_2)
         self.frame_21.setObjectName(u"frame_21")
         self.frame_21.setGeometry(QRect(0, 478, 1171, 104))
-        self.frame_21.setStyleSheet(u"background-color: #DBDBDB;\n"
+        self.frame_21.setStyleSheet(u"background-color:#DBDBDB;\n"
 "border-color: transparent;")
         self.frame_21.setFrameShape(QFrame.StyledPanel)
         self.frame_21.setFrameShadow(QFrame.Raised)
@@ -323,108 +322,198 @@ class Ui_Dialog(object):
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(470, 4, 281, 91))
         self.label_2.setStyleSheet(u"color: #F8E6D3")
-        self.pushButton_9 = QPushButton(Dialog)
-        self.pushButton_9.setObjectName(u"pushButton_9")
-        self.pushButton_9.setGeometry(QRect(-2, 140, 21, 630))
-        self.pushButton_9.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton_9.setStyleSheet(u"QPushButton{\n"
-"	image: url(:/imagens/Arrow 2.png);\n"
-"	background-color: rgba(0, 0, 0, .1);\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"	background-color: rgba(0, 0, 0, .2);\n"
-"}")
         self.frame_22 = QFrame(Dialog)
         self.frame_22.setObjectName(u"frame_22")
         self.frame_22.setGeometry(QRect(0, 141, 111, 631))
         self.frame_22.setStyleSheet(u"background-color: #522E2E")
         self.frame_22.setFrameShape(QFrame.StyledPanel)
         self.frame_22.setFrameShadow(QFrame.Raised)
-        self.verticalLayout = QVBoxLayout(self.frame_22)
-        self.verticalLayout.setObjectName(u"verticalLayout")
         self.frame_23 = QFrame(self.frame_22)
         self.frame_23.setObjectName(u"frame_23")
-        self.frame_23.setCursor(QCursor(Qt.PointingHandCursor))
+        self.frame_23.setGeometry(QRect(0, 0, 101, 471))
         self.frame_23.setFrameShape(QFrame.StyledPanel)
         self.frame_23.setFrameShadow(QFrame.Raised)
-        self.label_17 = QLabel(self.frame_23)
-        self.label_17.setObjectName(u"label_17")
-        self.label_17.setGeometry(QRect(-1, -14, 91, 81))
-        self.label_17.setStyleSheet(u"image: url(:/imagens/transferir (1) 1.png);")
-        self.label_18 = QLabel(self.frame_23)
-        self.label_18.setObjectName(u"label_18")
-        self.label_18.setGeometry(QRect(15, 60, 68, 16))
-        self.label_18.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.verticalLayout = QVBoxLayout(self.frame_23)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.frame_31 = QFrame(self.frame_23)
+        self.frame_31.setObjectName(u"frame_31")
+        self.frame_31.setStyleSheet(u"color: white;")
+        self.frame_31.setFrameShape(QFrame.StyledPanel)
+        self.frame_31.setFrameShadow(QFrame.Raised)
+        self.pushButton_27 = QPushButton(self.frame_31)
+        self.pushButton_27.setObjectName(u"pushButton_27")
+        self.pushButton_27.setGeometry(QRect(7, 9, 71, 41))
+        self.pushButton_27.setStyleSheet(u"background-color: transparent;\n"
+"border-color: transparent;\n"
+"image: url(:/imagens/transferir (1) 1.png);\n"
+"color: white;")
+        self.frame_40 = QFrame(self.frame_31)
+        self.frame_40.setObjectName(u"frame_40")
+        self.frame_40.setGeometry(QRect(0, 140, 91, 96))
+        self.frame_40.setStyleSheet(u"color: white;")
+        self.frame_40.setFrameShape(QFrame.StyledPanel)
+        self.frame_40.setFrameShadow(QFrame.Raised)
+        self.pushButton_28 = QPushButton(self.frame_40)
+        self.pushButton_28.setObjectName(u"pushButton_28")
+        self.pushButton_28.setGeometry(QRect(9, 10, 75, 44))
+        self.pushButton_28.setStyleSheet(u"background-color: transparent;\n"
+"border-color: transparent;\n"
+"image: url(:/imagens/transferir (1) 1.png);\n"
+"color: white;")
+        self.label_40 = QLabel(self.frame_40)
+        self.label_40.setObjectName(u"label_40")
+        self.label_40.setGeometry(QRect(18, 60, 60, 16))
+        self.pushButton_6 = QPushButton(self.frame_31)
+        self.pushButton_6.setObjectName(u"pushButton_6")
+        self.pushButton_6.setGeometry(QRect(10, 60, 75, 24))
+        self.pushButton_6.setStyleSheet(u"border-color: transparent;\n"
+"background-color: transparent;")
 
-        self.verticalLayout.addWidget(self.frame_23)
+        self.verticalLayout.addWidget(self.frame_31)
 
-        self.frame_24 = QFrame(self.frame_22)
+        self.frame_24 = QFrame(self.frame_23)
         self.frame_24.setObjectName(u"frame_24")
-        self.frame_24.setCursor(QCursor(Qt.PointingHandCursor))
+        self.frame_24.setStyleSheet(u"color: white;")
         self.frame_24.setFrameShape(QFrame.StyledPanel)
         self.frame_24.setFrameShadow(QFrame.Raised)
-        self.label_19 = QLabel(self.frame_24)
-        self.label_19.setObjectName(u"label_19")
-        self.label_19.setGeometry(QRect(11, 8, 61, 41))
-        self.label_19.setStyleSheet(u"image: url(:/imagens/\ud83e\udd86 icon _cart o_.png);")
-        self.label_20 = QLabel(self.frame_24)
-        self.label_20.setObjectName(u"label_20")
-        self.label_20.setGeometry(QRect(24, 60, 55, 16))
-        self.label_20.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"text-align: center;")
+        self.pushButton_11 = QPushButton(self.frame_24)
+        self.pushButton_11.setObjectName(u"pushButton_11")
+        self.pushButton_11.setGeometry(QRect(8, 11, 66, 36))
+        self.pushButton_11.setStyleSheet(u"background-color: transparent;\n"
+"border-color: transparent;\n"
+"image: url(:/imagens/\ud83e\udd86 icon _cart o_.png);\n"
+"color: white;")
+        self.frame_29 = QFrame(self.frame_24)
+        self.frame_29.setObjectName(u"frame_29")
+        self.frame_29.setGeometry(QRect(0, 140, 91, 96))
+        self.frame_29.setStyleSheet(u"color: white;")
+        self.frame_29.setFrameShape(QFrame.StyledPanel)
+        self.frame_29.setFrameShadow(QFrame.Raised)
+        self.pushButton_12 = QPushButton(self.frame_29)
+        self.pushButton_12.setObjectName(u"pushButton_12")
+        self.pushButton_12.setGeometry(QRect(9, 10, 75, 44))
+        self.pushButton_12.setStyleSheet(u"background-color: transparent;\n"
+"border-color: transparent;\n"
+"image: url(:/imagens/transferir (1) 1.png);\n"
+"color: white;")
+        self.label_24 = QLabel(self.frame_29)
+        self.label_24.setObjectName(u"label_24")
+        self.label_24.setGeometry(QRect(18, 60, 60, 16))
+        self.pushButton_9 = QPushButton(self.frame_24)
+        self.pushButton_9.setObjectName(u"pushButton_9")
+        self.pushButton_9.setGeometry(QRect(7, 58, 75, 24))
+        self.pushButton_9.setStyleSheet(u"border-color: transparent;\n"
+"background-color: transparent;")
 
         self.verticalLayout.addWidget(self.frame_24)
 
-        self.frame_25 = QFrame(self.frame_22)
-        self.frame_25.setObjectName(u"frame_25")
-        self.frame_25.setCursor(QCursor(Qt.PointingHandCursor))
-        self.frame_25.setFrameShape(QFrame.StyledPanel)
-        self.frame_25.setFrameShadow(QFrame.Raised)
-        self.label_21 = QLabel(self.frame_25)
-        self.label_21.setObjectName(u"label_21")
-        self.label_21.setGeometry(QRect(-1, -14, 91, 81))
-        self.label_21.setStyleSheet(u"image: url(:/imagens/free-invoice-3155204-2630870 1.png);")
-        self.label_22 = QLabel(self.frame_25)
-        self.label_22.setObjectName(u"label_22")
-        self.label_22.setGeometry(QRect(24, 60, 46, 16))
-        self.label_22.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.frame_34 = QFrame(self.frame_23)
+        self.frame_34.setObjectName(u"frame_34")
+        self.frame_34.setStyleSheet(u"color: white;")
+        self.frame_34.setFrameShape(QFrame.StyledPanel)
+        self.frame_34.setFrameShadow(QFrame.Raised)
+        self.pushButton_21 = QPushButton(self.frame_34)
+        self.pushButton_21.setObjectName(u"pushButton_21")
+        self.pushButton_21.setGeometry(QRect(9, 9, 70, 40))
+        self.pushButton_21.setStyleSheet(u"background-color: transparent;\n"
+"border-color: transparent;\n"
+"image: url(:/imagens/free-invoice-3155204-2630870 1.png);\n"
+"color: white;")
+        self.frame_37 = QFrame(self.frame_34)
+        self.frame_37.setObjectName(u"frame_37")
+        self.frame_37.setGeometry(QRect(0, 140, 91, 96))
+        self.frame_37.setStyleSheet(u"color: white;")
+        self.frame_37.setFrameShape(QFrame.StyledPanel)
+        self.frame_37.setFrameShadow(QFrame.Raised)
+        self.pushButton_22 = QPushButton(self.frame_37)
+        self.pushButton_22.setObjectName(u"pushButton_22")
+        self.pushButton_22.setGeometry(QRect(9, 10, 75, 44))
+        self.pushButton_22.setStyleSheet(u"background-color: transparent;\n"
+"border-color: transparent;\n"
+"image: url(:/imagens/transferir (1) 1.png);\n"
+"color: white;")
+        self.label_34 = QLabel(self.frame_37)
+        self.label_34.setObjectName(u"label_34")
+        self.label_34.setGeometry(QRect(18, 60, 60, 16))
+        self.pushButton_13 = QPushButton(self.frame_34)
+        self.pushButton_13.setObjectName(u"pushButton_13")
+        self.pushButton_13.setGeometry(QRect(7, 58, 75, 24))
+        self.pushButton_13.setStyleSheet(u"border-color: transparent;\n"
+"background-color: transparent;")
 
-        self.verticalLayout.addWidget(self.frame_25)
+        self.verticalLayout.addWidget(self.frame_34)
 
-        self.frame_26 = QFrame(self.frame_22)
-        self.frame_26.setObjectName(u"frame_26")
-        self.frame_26.setCursor(QCursor(Qt.PointingHandCursor))
-        self.frame_26.setFrameShape(QFrame.StyledPanel)
-        self.frame_26.setFrameShadow(QFrame.Raised)
-        self.label_23 = QLabel(self.frame_26)
-        self.label_23.setObjectName(u"label_23")
-        self.label_23.setGeometry(QRect(-1, -14, 91, 81))
-        self.label_23.setStyleSheet(u"image: url(:/imagens/free-monitor-1629555-1383411 1.png);")
-        self.label_24 = QLabel(self.frame_26)
-        self.label_24.setObjectName(u"label_24")
-        self.label_24.setGeometry(QRect(22, 60, 51, 16))
-        self.label_24.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.frame_36 = QFrame(self.frame_23)
+        self.frame_36.setObjectName(u"frame_36")
+        self.frame_36.setStyleSheet(u"color: white;")
+        self.frame_36.setFrameShape(QFrame.StyledPanel)
+        self.frame_36.setFrameShadow(QFrame.Raised)
+        self.pushButton_25 = QPushButton(self.frame_36)
+        self.pushButton_25.setObjectName(u"pushButton_25")
+        self.pushButton_25.setGeometry(QRect(9, 11, 69, 39))
+        self.pushButton_25.setStyleSheet(u"background-color: transparent;\n"
+"border-color: transparent;\n"
+"image: url(:/imagens/free-monitor-1629555-1383411 1.png);\n"
+"color: white;")
+        self.frame_39 = QFrame(self.frame_36)
+        self.frame_39.setObjectName(u"frame_39")
+        self.frame_39.setGeometry(QRect(0, 140, 91, 96))
+        self.frame_39.setStyleSheet(u"color: white;")
+        self.frame_39.setFrameShape(QFrame.StyledPanel)
+        self.frame_39.setFrameShadow(QFrame.Raised)
+        self.pushButton_26 = QPushButton(self.frame_39)
+        self.pushButton_26.setObjectName(u"pushButton_26")
+        self.pushButton_26.setGeometry(QRect(9, 10, 75, 44))
+        self.pushButton_26.setStyleSheet(u"background-color: transparent;\n"
+"border-color: transparent;\n"
+"image: url(:/imagens/transferir (1) 1.png);\n"
+"color: white;")
+        self.label_38 = QLabel(self.frame_39)
+        self.label_38.setObjectName(u"label_38")
+        self.label_38.setGeometry(QRect(18, 60, 60, 16))
+        self.pushButton_14 = QPushButton(self.frame_36)
+        self.pushButton_14.setObjectName(u"pushButton_14")
+        self.pushButton_14.setGeometry(QRect(8, 60, 75, 24))
+        self.pushButton_14.setStyleSheet(u"border-color: transparent;\n"
+"background-color: transparent;")
 
-        self.verticalLayout.addWidget(self.frame_26)
+        self.verticalLayout.addWidget(self.frame_36)
 
-        self.frame_27 = QFrame(self.frame_22)
-        self.frame_27.setObjectName(u"frame_27")
-        self.frame_27.setFrameShape(QFrame.StyledPanel)
-        self.frame_27.setFrameShadow(QFrame.Raised)
-        self.label_25 = QLabel(self.frame_27)
-        self.label_25.setObjectName(u"label_25")
-        self.label_25.setGeometry(QRect(-1, -14, 91, 81))
-        self.label_25.setCursor(QCursor(Qt.PointingHandCursor))
-        self.label_25.setStyleSheet(u"image: url(:/imagens/mindtouch 1.png);\n"
-"")
-        self.label_26 = QLabel(self.frame_27)
-        self.label_26.setObjectName(u"label_26")
-        self.label_26.setGeometry(QRect(21, 60, 51, 16))
-        self.label_26.setCursor(QCursor(Qt.PointingHandCursor))
-        self.label_26.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.frame_41 = QFrame(self.frame_23)
+        self.frame_41.setObjectName(u"frame_41")
+        self.frame_41.setStyleSheet(u"color: white;")
+        self.frame_41.setFrameShape(QFrame.StyledPanel)
+        self.frame_41.setFrameShadow(QFrame.Raised)
+        self.pushButton_29 = QPushButton(self.frame_41)
+        self.pushButton_29.setObjectName(u"pushButton_29")
+        self.pushButton_29.setGeometry(QRect(9, 16, 68, 38))
+        self.pushButton_29.setStyleSheet(u"background-color: transparent;\n"
+"border-color: transparent;\n"
+"image: url(:/imagens/mindtouch 1.png);\n"
+"color: white;")
+        self.frame_42 = QFrame(self.frame_41)
+        self.frame_42.setObjectName(u"frame_42")
+        self.frame_42.setGeometry(QRect(0, 140, 91, 96))
+        self.frame_42.setStyleSheet(u"color: white;")
+        self.frame_42.setFrameShape(QFrame.StyledPanel)
+        self.frame_42.setFrameShadow(QFrame.Raised)
+        self.pushButton_30 = QPushButton(self.frame_42)
+        self.pushButton_30.setObjectName(u"pushButton_30")
+        self.pushButton_30.setGeometry(QRect(9, 10, 75, 44))
+        self.pushButton_30.setStyleSheet(u"background-color: transparent;\n"
+"border-color: transparent;\n"
+"image: url(:/imagens/transferir (1) 1.png);\n"
+"color: white;")
+        self.label_42 = QLabel(self.frame_42)
+        self.label_42.setObjectName(u"label_42")
+        self.label_42.setGeometry(QRect(18, 60, 60, 16))
+        self.pushButton_15 = QPushButton(self.frame_41)
+        self.pushButton_15.setObjectName(u"pushButton_15")
+        self.pushButton_15.setGeometry(QRect(9, 56, 75, 24))
+        self.pushButton_15.setStyleSheet(u"border-color: transparent;\n"
+"background-color: transparent;")
 
-        self.verticalLayout.addWidget(self.frame_27)
+        self.verticalLayout.addWidget(self.frame_41)
 
         self.pushButton_10 = QPushButton(Dialog)
         self.pushButton_10.setObjectName(u"pushButton_10")
@@ -439,6 +528,10 @@ class Ui_Dialog(object):
 "QPushButton:hover{\n"
 "	background-color: rgba(0, 0, 0, .3);\n"
 "}")
+        self.frame_2.raise_()
+        self.frame.raise_()
+        self.pushButton_10.raise_()
+        self.frame_22.raise_()
 
         self.retranslateUi(Dialog)
 
@@ -473,17 +566,26 @@ class Ui_Dialog(object):
         self.pushButton_8.setText(QCoreApplication.translate("Dialog", u"Payment", None))
         self.label.setText("")
         self.label_2.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:36pt;\">D.W Coffee</span></p></body></html>", None))
-        self.pushButton_9.setText("")
-        self.label_17.setText("")
-        self.label_18.setText(QCoreApplication.translate("Dialog", u"NEW ORDER", None))
-        self.label_19.setText("")
-        self.label_20.setText(QCoreApplication.translate("Dialog", u"PAYMENT", None))
-        self.label_21.setText("")
-        self.label_22.setText(QCoreApplication.translate("Dialog", u"ORDERS", None))
-        self.label_23.setText("")
-        self.label_24.setText(QCoreApplication.translate("Dialog", u"MONITOR", None))
-        self.label_25.setText("")
-        self.label_26.setText(QCoreApplication.translate("Dialog", u"SETTINGS", None))
+        self.pushButton_27.setText("")
+        self.pushButton_28.setText("")
+        self.label_40.setText(QCoreApplication.translate("Dialog", u"New Order", None))
+        self.pushButton_6.setText(QCoreApplication.translate("Dialog", u"NEW ORDER", None))
+        self.pushButton_11.setText("")
+        self.pushButton_12.setText("")
+        self.label_24.setText(QCoreApplication.translate("Dialog", u"New Order", None))
+        self.pushButton_9.setText(QCoreApplication.translate("Dialog", u"PAYMENT", None))
+        self.pushButton_21.setText("")
+        self.pushButton_22.setText("")
+        self.label_34.setText(QCoreApplication.translate("Dialog", u"New Order", None))
+        self.pushButton_13.setText(QCoreApplication.translate("Dialog", u"ORDERS", None))
+        self.pushButton_25.setText("")
+        self.pushButton_26.setText("")
+        self.label_38.setText(QCoreApplication.translate("Dialog", u"New Order", None))
+        self.pushButton_14.setText(QCoreApplication.translate("Dialog", u"MONITOR", None))
+        self.pushButton_29.setText("")
+        self.pushButton_30.setText("")
+        self.label_42.setText(QCoreApplication.translate("Dialog", u"New Order", None))
+        self.pushButton_15.setText(QCoreApplication.translate("Dialog", u"SETTINGS", None))
         self.pushButton_10.setText("")
     # retranslateUi
 

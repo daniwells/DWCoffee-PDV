@@ -1,19 +1,57 @@
 from PySide6 import QtCore
 from PySide6.QtCore import QCoreApplication
 from PySide6.QtGui import QIcon
-from PySide6.QtWidgets import (QApplication, QMainWindow, QMessageBox, QTableWidgetItem)
+from PySide6.QtWidgets import (QApplication, QMainWindow, QMessageBox, QTableWidgetItem,QStackedWidget)
 from pages.initial import initial
 from pages.login import login
 from pages.register import register
 from pages.order import orderPage
 import sys
 from database import Database
+import time
 
 class Order(QMainWindow, orderPage.Ui_Dialog):
     def __init__(self):
         super(Order, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("Order Page")
+        self.pushButton_10.clicked.connect(self.openMenu)
+
+    def openMenu(self):
+        start_geometry = self.frame_22.geometry()
+        
+        if start_geometry.getRect() == (0, 141, 111, 631):
+            end_geometry = start_geometry.translated(-120, 0)
+        else:
+            end_geometry = start_geometry.translated(120, 0)
+
+        self.animation = QtCore.QPropertyAnimation(self.frame_22, b"geometry")
+        self.animation.setDuration(500)
+        self.animation.setStartValue(start_geometry)
+        self.animation.setEndValue(end_geometry)
+        self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+        self.animation.start()
+
+        self.moveBottomMenu()
+
+    def moveBottomMenu(self):
+        start_geometry = self.pushButton_10.geometry()
+        
+        if start_geometry.getRect() == (110, 140, 16, 631):
+            end_geometry = start_geometry.translated(-112, 0)
+        else:
+            end_geometry = start_geometry.translated(112, 0)
+
+        self.animation2 = QtCore.QPropertyAnimation(self.pushButton_10, b"geometry")
+        self.animation2.setDuration(500)
+        self.animation2.setStartValue(start_geometry)
+        self.animation2.setEndValue(end_geometry)
+        self.animation2.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+        self.animation2.start()
+
+        
+        
+        
 
 class Login(QMainWindow, login.Ui_Dialog):
     def __init__(self):
@@ -23,8 +61,9 @@ class Login(QMainWindow, login.Ui_Dialog):
         self.pushButton.clicked.connect(self.login_finish)
 
     def login_finish(self):
-        self.close()        
-        order.show()
+        order = Order()
+        widget.addWidget(order)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
 class Register(QMainWindow, register.Ui_Dialog):
     def __init__(self):
@@ -34,9 +73,10 @@ class Register(QMainWindow, register.Ui_Dialog):
         self.pushButton_2.clicked.connect(self.register_finish)  
 
     def register_finish(self):
+        order = Order()
         self.register_user()
-        self.close()        
-        order.show()
+        widget.addWidget(order)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
 
     def register_user(self):
@@ -77,20 +117,19 @@ class MainWindow(QMainWindow, initial.Ui_Dialog):
         super(MainWindow, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("DWCoffee - PDV")
-        #appIcon = QIcon(u"icons/logo4.png")
-        appIcon = QIcon(u"") #ainda nao selecionamos o item
-        self.setWindowIcon(appIcon) # colocar icon na janela  
-        #Botão Inicial para abrir o menu.
-        self.pushButton.clicked.connect(self.login)  
+    
+        self.pushButton.clicked.connect(self.gotologin)  
         self.pushButton_2.clicked.connect(self.register)
 
-    def login(self):
-        self.close()        
-        login.show()
+    def gotologin(self):
+        login = Login()
+        widget.addWidget(login)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
     def register(self):
-        self.close()        
-        register.show()
+        register = Register()
+        widget.addWidget(register)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
 
 #############################  CRUD FUNCTIONS  #############################
@@ -103,9 +142,12 @@ if __name__ == "__main__":
 
     app = QApplication(sys.argv)
     window = MainWindow()
-    login = Login()
-    register = Register()
-    order = Order()
+
+    widget = QStackedWidget()
+    widget.addWidget(window)
+    widget.setFixedHeight(768)
+    widget.setFixedWidth(1160)
+    widget.show()
 
     window.show()
     app.exec()

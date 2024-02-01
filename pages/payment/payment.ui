@@ -14,14 +14,14 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 243, 243);</string>
+   <string notr="true">background-color: #F3F3F3;</string>
   </property>
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>40</y>
-     <width>1161</width>
+     <width>1171</width>
      <height>101</height>
     </rect>
    </property>
@@ -890,7 +890,7 @@ font-weight: bold;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgba(0, 0, 0, .11);</string>
+    <string notr="true">background-color: #DBDBDB;</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -985,7 +985,7 @@ QPushButton:hover{
   </widget>
  </widget>
  <resources>
-  <include location="../../imagens/imagens.qrc"/>
+  <include location="../../images/imagens.qrc"/>
  </resources>
  <connections/>
 </ui>

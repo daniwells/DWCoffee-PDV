@@ -29,24 +29,20 @@ class Database:
                 type_user varchar(40) NOT NULL
             )"""
         )
-
+ 
     
     def register_user(self, fullDataSet):
         buys_table = ('fullname','name_company','cnpj','password','type_user')
         qntd = ("?, ?, ?, ?, ?")
 
-        print(fullDataSet)
-        print(qntd)
         try:
             self.cursor.execute(
             f"""
                 INSERT INTO users (fullname, name_company, cnpj,password, type_user) VALUES (?,?,?,?,?)  
             """, fullDataSet)
-
-            print("banana")
+            self.connection.commit()
             return "DEU BOM!!"
         except: 
-            print("morango")
             return "DEU RUIM!!"
 
 
