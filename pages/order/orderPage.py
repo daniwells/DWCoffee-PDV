@@ -16,19 +16,19 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QDialog, QFrame,
-    QLabel, QPushButton, QScrollArea, QScrollBar,
-    QSizePolicy, QVBoxLayout, QWidget)
+    QLabel, QListWidget, QListWidgetItem, QPushButton,
+    QScrollArea, QSizePolicy, QVBoxLayout, QWidget)
 import images
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
-        Dialog.resize(1160, 768)
+        Dialog.resize(1160, 778)
         Dialog.setStyleSheet(u"background-color: #F3F3F3;")
         self.frame_2 = QFrame(Dialog)
         self.frame_2.setObjectName(u"frame_2")
-        self.frame_2.setGeometry(QRect(0, 190, 1161, 581))
+        self.frame_2.setGeometry(QRect(0, 190, 1161, 481))
         self.frame_2.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 "border-top: 0.5px solid rgba(0,0,0,.4);")
         self.frame_2.setFrameShape(QFrame.StyledPanel)
@@ -43,7 +43,7 @@ class Ui_Dialog(object):
         self.frame_5.setFrameShadow(QFrame.Raised)
         self.frame_10 = QFrame(self.frame_5)
         self.frame_10.setObjectName(u"frame_10")
-        self.frame_10.setGeometry(QRect(0, 320, 460, 150))
+        self.frame_10.setGeometry(QRect(0, 318, 460, 144))
         self.frame_10.setFrameShape(QFrame.StyledPanel)
         self.frame_10.setFrameShadow(QFrame.Raised)
         self.label_3 = QLabel(self.frame_10)
@@ -54,7 +54,7 @@ class Ui_Dialog(object):
 "font-size: 18px;")
         self.pushButton = QPushButton(self.frame_10)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(1, 75, 453, 66))
+        self.pushButton.setGeometry(QRect(0, 72, 453, 68))
         self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgba(211, 164, 110, .9);\n"
@@ -74,15 +74,12 @@ class Ui_Dialog(object):
 "background-color: rgba(61, 21, 21, .75);\n"
 "color: white;\n"
 "font-size: 20px;")
+        self.listWidget = QListWidget(self.frame_5)
+        self.listWidget.setObjectName(u"listWidget")
+        self.listWidget.setGeometry(QRect(0, 51, 450, 268))
         self.comboBox = QComboBox(self.frame_2)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
         self.comboBox.setObjectName(u"comboBox")
-        self.comboBox.setGeometry(QRect(61, 20, 587, 40))
+        self.comboBox.setGeometry(QRect(61, 20, 601, 40))
         self.comboBox.setCursor(QCursor(Qt.PointingHandCursor))
         self.comboBox.setStyleSheet(u"QComboBox{\n"
 "	border: .5px solid rgba(0,0,0,.5);\n"
@@ -93,19 +90,39 @@ class Ui_Dialog(object):
 "\n"
 "QComboBox:hover{\n"
 "	border: .5px solid rgba(0,0,0,1);\n"
-"}")
+"}\n"
+"\n"
+"/*QComboBox::down-arrow{\n"
+"	image: url(:/imagens/expand_more_FILL0_wght400_GRAD0_opsz24.png);\n"
+"	width:30px;\n"
+"	height:30px;\n"
+"	border-color: transparent;\n"
+"}*/")
         self.scrollArea = QScrollArea(self.frame_2)
         self.scrollArea.setObjectName(u"scrollArea")
-        self.scrollArea.setGeometry(QRect(39, 109, 611, 371))
-        self.scrollArea.setStyleSheet(u"border-color: transparent")
-        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea.setGeometry(QRect(50, 90, 611, 391))
+        self.scrollArea.setMinimumSize(QSize(0, 0))
+        self.scrollArea.setStyleSheet(u"QScrollBar{\n"
+"	border-color: transparent; \n"
+"	border: none;\n"
+"	background-color: none;\n"
+"	background: none;\n"
+"}\n"
+"QScrollBar:vertical{ \n"
+"	width: 2px;\n"
+"	background-color: black;\n"
+"	border-radius: 4px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical{ \n"
+"	border: none;\n"
+"	border-color: transparent;\n"
+"}")
+        self.scrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.scrollArea.setWidgetResizable(False)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 609, 369))
-        self.verticalScrollBar = QScrollBar(self.scrollAreaWidgetContents)
-        self.verticalScrollBar.setObjectName(u"verticalScrollBar")
-        self.verticalScrollBar.setGeometry(QRect(590, 0, 17, 401))
-        self.verticalScrollBar.setOrientation(Qt.Vertical)
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 609, 539))
         self.frame_7 = QFrame(self.scrollAreaWidgetContents)
         self.frame_7.setObjectName(u"frame_7")
         self.frame_7.setGeometry(QRect(258, 9, 20, 46))
@@ -131,7 +148,10 @@ class Ui_Dialog(object):
         self.frame_4.setObjectName(u"frame_4")
         self.frame_4.setGeometry(QRect(20, 10, 151, 231))
         self.frame_4.setCursor(QCursor(Qt.PointingHandCursor))
-        self.frame_4.setStyleSheet(u"")
+        self.frame_4.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid #522E2E;\n"
+"	padding: 10px;\n"
+"}")
         self.frame_4.setFrameShape(QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QFrame.Raised)
         self.frame_9 = QFrame(self.frame_4)
@@ -152,6 +172,10 @@ class Ui_Dialog(object):
         self.frame_6.setObjectName(u"frame_6")
         self.frame_6.setGeometry(QRect(210, 10, 151, 231))
         self.frame_6.setCursor(QCursor(Qt.PointingHandCursor))
+        self.frame_6.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid #522E2E;\n"
+"	padding: 10px;\n"
+"}")
         self.frame_6.setFrameShape(QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QFrame.Raised)
         self.frame_11 = QFrame(self.frame_6)
@@ -173,11 +197,17 @@ class Ui_Dialog(object):
         self.frame_8.setObjectName(u"frame_8")
         self.frame_8.setGeometry(QRect(400, 10, 151, 231))
         self.frame_8.setCursor(QCursor(Qt.PointingHandCursor))
+        self.frame_8.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid #522E2E;\n"
+"	padding: 10px;\n"
+"}")
         self.frame_8.setFrameShape(QFrame.StyledPanel)
         self.frame_8.setFrameShadow(QFrame.Raised)
         self.frame_12 = QFrame(self.frame_8)
         self.frame_12.setObjectName(u"frame_12")
         self.frame_12.setGeometry(QRect(0, 0, 151, 181))
+        self.frame_12.setContextMenuPolicy(Qt.NoContextMenu)
+        self.frame_12.setAutoFillBackground(False)
         self.frame_12.setStyleSheet(u"image: url(:/imagens/image 4.png);")
         self.frame_12.setFrameShape(QFrame.StyledPanel)
         self.frame_12.setFrameShadow(QFrame.Raised)
@@ -191,15 +221,18 @@ class Ui_Dialog(object):
 "font-weight: 900;")
         self.frame_13 = QFrame(self.scrollAreaWidgetContents)
         self.frame_13.setObjectName(u"frame_13")
-        self.frame_13.setGeometry(QRect(20, 260, 151, 231))
-        self.frame_13.setStyleSheet(u"")
+        self.frame_13.setGeometry(QRect(20, 269, 151, 221))
+        self.frame_13.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid #522E2E;\n"
+"	padding: 10px;\n"
+"}")
         self.frame_13.setFrameShape(QFrame.StyledPanel)
         self.frame_13.setFrameShadow(QFrame.Raised)
         self.frame_14 = QFrame(self.frame_13)
         self.frame_14.setObjectName(u"frame_14")
         self.frame_14.setGeometry(QRect(0, 0, 151, 181))
         self.frame_14.setCursor(QCursor(Qt.PointingHandCursor))
-        self.frame_14.setStyleSheet(u"image: url(:/imagens/image 1.png);")
+        self.frame_14.setStyleSheet(u"image: url(:/imagens/Rectangle 69.png);")
         self.frame_14.setFrameShape(QFrame.StyledPanel)
         self.frame_14.setFrameShadow(QFrame.Raised)
         self.label_11 = QLabel(self.frame_13)
@@ -213,14 +246,17 @@ class Ui_Dialog(object):
         self.frame_17 = QFrame(self.scrollAreaWidgetContents)
         self.frame_17.setObjectName(u"frame_17")
         self.frame_17.setGeometry(QRect(210, 270, 151, 231))
-        self.frame_17.setStyleSheet(u"")
+        self.frame_17.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid #522E2E;\n"
+"	padding: 10px;\n"
+"}")
         self.frame_17.setFrameShape(QFrame.StyledPanel)
         self.frame_17.setFrameShadow(QFrame.Raised)
         self.frame_18 = QFrame(self.frame_17)
         self.frame_18.setObjectName(u"frame_18")
         self.frame_18.setGeometry(QRect(0, 0, 151, 181))
         self.frame_18.setCursor(QCursor(Qt.PointingHandCursor))
-        self.frame_18.setStyleSheet(u"image: url(:/imagens/image 1.png);")
+        self.frame_18.setStyleSheet(u"image: url(:/imagens/image 5.png);")
         self.frame_18.setFrameShape(QFrame.StyledPanel)
         self.frame_18.setFrameShadow(QFrame.Raised)
         self.label_13 = QLabel(self.frame_17)
@@ -234,14 +270,17 @@ class Ui_Dialog(object):
         self.frame_19 = QFrame(self.scrollAreaWidgetContents)
         self.frame_19.setObjectName(u"frame_19")
         self.frame_19.setGeometry(QRect(400, 270, 151, 231))
-        self.frame_19.setStyleSheet(u"")
+        self.frame_19.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid #522E2E;\n"
+"	padding: 10px;\n"
+"}")
         self.frame_19.setFrameShape(QFrame.StyledPanel)
         self.frame_19.setFrameShadow(QFrame.Raised)
         self.frame_20 = QFrame(self.frame_19)
         self.frame_20.setObjectName(u"frame_20")
         self.frame_20.setGeometry(QRect(0, 0, 151, 181))
         self.frame_20.setCursor(QCursor(Qt.PointingHandCursor))
-        self.frame_20.setStyleSheet(u"image: url(:/imagens/image 1.png);")
+        self.frame_20.setStyleSheet(u"image: url(:/imagens/Rectangle 71.png);")
         self.frame_20.setFrameShape(QFrame.StyledPanel)
         self.frame_20.setFrameShadow(QFrame.Raised)
         self.label_15 = QLabel(self.frame_19)
@@ -253,55 +292,9 @@ class Ui_Dialog(object):
         self.label_16.setStyleSheet(u"color: #220C0C;\n"
 "font-weight: 900;")
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-        self.frame_7.raise_()
-        self.verticalScrollBar.raise_()
-        self.frame_4.raise_()
-        self.frame_6.raise_()
-        self.frame_8.raise_()
-        self.frame_13.raise_()
-        self.frame_17.raise_()
-        self.frame_19.raise_()
-        self.frame_21 = QFrame(self.frame_2)
-        self.frame_21.setObjectName(u"frame_21")
-        self.frame_21.setGeometry(QRect(0, 478, 1171, 104))
-        self.frame_21.setStyleSheet(u"background-color:#DBDBDB;\n"
-"border-color: transparent;")
-        self.frame_21.setFrameShape(QFrame.StyledPanel)
-        self.frame_21.setFrameShadow(QFrame.Raised)
-        self.pushButton_7 = QPushButton(self.frame_21)
-        self.pushButton_7.setObjectName(u"pushButton_7")
-        self.pushButton_7.setGeometry(QRect(437, 35, 131, 31))
-        self.pushButton_7.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton_7.setStyleSheet(u"QPushButton{\n"
-"	border: transparent;\n"
-"	background-color: transparent;\n"
-"	font-size: 22px;\n"
-"	font-weight: bold;\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"	color: rgba(61, 21, 21, .75);\n"
-"}\n"
-"")
-        self.pushButton_8 = QPushButton(self.frame_21)
-        self.pushButton_8.setObjectName(u"pushButton_8")
-        self.pushButton_8.setGeometry(QRect(637, 35, 131, 31))
-        self.pushButton_8.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton_8.setStyleSheet(u"QPushButton{\n"
-"	border: transparent;\n"
-"	background-color: transparent;\n"
-"	font-size: 22px;\n"
-"	font-weight: bold;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"	color: rgba(61, 21, 21, .75);\n"
-"}")
+        self.comboBox.raise_()
         self.scrollArea.raise_()
         self.frame_5.raise_()
-        self.comboBox.raise_()
-        self.frame_21.raise_()
         self.frame = QFrame(Dialog)
         self.frame.setObjectName(u"frame")
         self.frame.setGeometry(QRect(0, 40, 1161, 101))
@@ -316,7 +309,7 @@ class Ui_Dialog(object):
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.label = QLabel(self.frame_3)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(18, 6, 98, 90))
+        self.label.setGeometry(QRect(18, 9, 96, 86))
         self.label.setStyleSheet(u"image: url(:/imagens/cGUFyIrl2tqx3cWHufs9--1--5d252-svg (1) 4.png);")
         self.label_2 = QLabel(self.frame)
         self.label_2.setObjectName(u"label_2")
@@ -324,25 +317,30 @@ class Ui_Dialog(object):
         self.label_2.setStyleSheet(u"color: #F8E6D3")
         self.frame_22 = QFrame(Dialog)
         self.frame_22.setObjectName(u"frame_22")
-        self.frame_22.setGeometry(QRect(0, 141, 111, 631))
+        self.frame_22.setGeometry(QRect(0, 141, 111, 641))
         self.frame_22.setStyleSheet(u"background-color: #522E2E")
         self.frame_22.setFrameShape(QFrame.StyledPanel)
         self.frame_22.setFrameShadow(QFrame.Raised)
         self.frame_23 = QFrame(self.frame_22)
         self.frame_23.setObjectName(u"frame_23")
-        self.frame_23.setGeometry(QRect(0, 0, 101, 471))
+        self.frame_23.setGeometry(QRect(0, 0, 111, 491))
         self.frame_23.setFrameShape(QFrame.StyledPanel)
         self.frame_23.setFrameShadow(QFrame.Raised)
         self.verticalLayout = QVBoxLayout(self.frame_23)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.frame_31 = QFrame(self.frame_23)
         self.frame_31.setObjectName(u"frame_31")
-        self.frame_31.setStyleSheet(u"color: white;")
+        self.frame_31.setCursor(QCursor(Qt.PointingHandCursor))
+        self.frame_31.setStyleSheet(u"QFrame:hover{\n"
+"	background-color: rgb(136, 85, 78);\n"
+"	border-radius: 10px;\n"
+"}")
         self.frame_31.setFrameShape(QFrame.StyledPanel)
         self.frame_31.setFrameShadow(QFrame.Raised)
         self.pushButton_27 = QPushButton(self.frame_31)
         self.pushButton_27.setObjectName(u"pushButton_27")
-        self.pushButton_27.setGeometry(QRect(7, 9, 71, 41))
+        self.pushButton_27.setGeometry(QRect(9, 9, 71, 41))
+        self.pushButton_27.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_27.setStyleSheet(u"background-color: transparent;\n"
 "border-color: transparent;\n"
 "image: url(:/imagens/transferir (1) 1.png);\n"
@@ -366,19 +364,26 @@ class Ui_Dialog(object):
         self.pushButton_6 = QPushButton(self.frame_31)
         self.pushButton_6.setObjectName(u"pushButton_6")
         self.pushButton_6.setGeometry(QRect(10, 60, 75, 24))
+        self.pushButton_6.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_6.setStyleSheet(u"border-color: transparent;\n"
-"background-color: transparent;")
+"background-color: transparent;\n"
+"color: white")
 
         self.verticalLayout.addWidget(self.frame_31)
 
         self.frame_24 = QFrame(self.frame_23)
         self.frame_24.setObjectName(u"frame_24")
-        self.frame_24.setStyleSheet(u"color: white;")
+        self.frame_24.setCursor(QCursor(Qt.PointingHandCursor))
+        self.frame_24.setStyleSheet(u"QFrame:hover{\n"
+"	background-color: rgb(136, 85, 78);\n"
+"	border-radius: 10px;\n"
+"}")
         self.frame_24.setFrameShape(QFrame.StyledPanel)
         self.frame_24.setFrameShadow(QFrame.Raised)
         self.pushButton_11 = QPushButton(self.frame_24)
         self.pushButton_11.setObjectName(u"pushButton_11")
-        self.pushButton_11.setGeometry(QRect(8, 11, 66, 36))
+        self.pushButton_11.setGeometry(QRect(10, 11, 66, 36))
+        self.pushButton_11.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_11.setStyleSheet(u"background-color: transparent;\n"
 "border-color: transparent;\n"
 "image: url(:/imagens/\ud83e\udd86 icon _cart o_.png);\n"
@@ -402,19 +407,26 @@ class Ui_Dialog(object):
         self.pushButton_9 = QPushButton(self.frame_24)
         self.pushButton_9.setObjectName(u"pushButton_9")
         self.pushButton_9.setGeometry(QRect(7, 58, 75, 24))
+        self.pushButton_9.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_9.setStyleSheet(u"border-color: transparent;\n"
-"background-color: transparent;")
+"background-color: transparent;\n"
+"color: white;")
 
         self.verticalLayout.addWidget(self.frame_24)
 
         self.frame_34 = QFrame(self.frame_23)
         self.frame_34.setObjectName(u"frame_34")
-        self.frame_34.setStyleSheet(u"color: white;")
+        self.frame_34.setCursor(QCursor(Qt.PointingHandCursor))
+        self.frame_34.setStyleSheet(u"QFrame:hover{\n"
+"	background-color: rgb(136, 85, 78);\n"
+"	border-radius: 10px;\n"
+"}")
         self.frame_34.setFrameShape(QFrame.StyledPanel)
         self.frame_34.setFrameShadow(QFrame.Raised)
         self.pushButton_21 = QPushButton(self.frame_34)
         self.pushButton_21.setObjectName(u"pushButton_21")
-        self.pushButton_21.setGeometry(QRect(9, 9, 70, 40))
+        self.pushButton_21.setGeometry(QRect(11, 10, 70, 40))
+        self.pushButton_21.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_21.setStyleSheet(u"background-color: transparent;\n"
 "border-color: transparent;\n"
 "image: url(:/imagens/free-invoice-3155204-2630870 1.png);\n"
@@ -438,19 +450,26 @@ class Ui_Dialog(object):
         self.pushButton_13 = QPushButton(self.frame_34)
         self.pushButton_13.setObjectName(u"pushButton_13")
         self.pushButton_13.setGeometry(QRect(7, 58, 75, 24))
+        self.pushButton_13.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_13.setStyleSheet(u"border-color: transparent;\n"
-"background-color: transparent;")
+"background-color: transparent;\n"
+"color: white;")
 
         self.verticalLayout.addWidget(self.frame_34)
 
         self.frame_36 = QFrame(self.frame_23)
         self.frame_36.setObjectName(u"frame_36")
-        self.frame_36.setStyleSheet(u"color: white;")
+        self.frame_36.setCursor(QCursor(Qt.PointingHandCursor))
+        self.frame_36.setStyleSheet(u"QFrame:hover{\n"
+"	background-color: rgb(136, 85, 78);\n"
+"	border-radius: 10px;\n"
+"}")
         self.frame_36.setFrameShape(QFrame.StyledPanel)
         self.frame_36.setFrameShadow(QFrame.Raised)
         self.pushButton_25 = QPushButton(self.frame_36)
         self.pushButton_25.setObjectName(u"pushButton_25")
-        self.pushButton_25.setGeometry(QRect(9, 11, 69, 39))
+        self.pushButton_25.setGeometry(QRect(12, 11, 69, 39))
+        self.pushButton_25.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_25.setStyleSheet(u"background-color: transparent;\n"
 "border-color: transparent;\n"
 "image: url(:/imagens/free-monitor-1629555-1383411 1.png);\n"
@@ -474,19 +493,26 @@ class Ui_Dialog(object):
         self.pushButton_14 = QPushButton(self.frame_36)
         self.pushButton_14.setObjectName(u"pushButton_14")
         self.pushButton_14.setGeometry(QRect(8, 60, 75, 24))
+        self.pushButton_14.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_14.setStyleSheet(u"border-color: transparent;\n"
-"background-color: transparent;")
+"background-color: transparent;\n"
+"color: white;")
 
         self.verticalLayout.addWidget(self.frame_36)
 
         self.frame_41 = QFrame(self.frame_23)
         self.frame_41.setObjectName(u"frame_41")
-        self.frame_41.setStyleSheet(u"color: white;")
+        self.frame_41.setCursor(QCursor(Qt.PointingHandCursor))
+        self.frame_41.setStyleSheet(u"QFrame:hover{\n"
+"	background-color: rgb(136, 85, 78);\n"
+"	border-radius: 10px;\n"
+"}")
         self.frame_41.setFrameShape(QFrame.StyledPanel)
         self.frame_41.setFrameShadow(QFrame.Raised)
         self.pushButton_29 = QPushButton(self.frame_41)
         self.pushButton_29.setObjectName(u"pushButton_29")
-        self.pushButton_29.setGeometry(QRect(9, 16, 68, 38))
+        self.pushButton_29.setGeometry(QRect(12, 13, 68, 38))
+        self.pushButton_29.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_29.setStyleSheet(u"background-color: transparent;\n"
 "border-color: transparent;\n"
 "image: url(:/imagens/mindtouch 1.png);\n"
@@ -509,15 +535,17 @@ class Ui_Dialog(object):
         self.label_42.setGeometry(QRect(18, 60, 60, 16))
         self.pushButton_15 = QPushButton(self.frame_41)
         self.pushButton_15.setObjectName(u"pushButton_15")
-        self.pushButton_15.setGeometry(QRect(9, 56, 75, 24))
+        self.pushButton_15.setGeometry(QRect(10, 56, 75, 24))
+        self.pushButton_15.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_15.setStyleSheet(u"border-color: transparent;\n"
-"background-color: transparent;")
+"background-color: transparent;\n"
+"color: white;")
 
         self.verticalLayout.addWidget(self.frame_41)
 
         self.pushButton_10 = QPushButton(Dialog)
         self.pushButton_10.setObjectName(u"pushButton_10")
-        self.pushButton_10.setGeometry(QRect(110, 140, 16, 631))
+        self.pushButton_10.setGeometry(QRect(110, 140, 16, 641))
         self.pushButton_10.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_10.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/imagens/Arrow 1.png);\n"
@@ -528,10 +556,49 @@ class Ui_Dialog(object):
 "QPushButton:hover{\n"
 "	background-color: rgba(0, 0, 0, .3);\n"
 "}")
+        self.frame_21 = QFrame(Dialog)
+        self.frame_21.setObjectName(u"frame_21")
+        self.frame_21.setGeometry(QRect(-10, 667, 1171, 111))
+        self.frame_21.setStyleSheet(u"background-color:#DBDBDB;\n"
+"border-color: transparent;\n"
+"")
+        self.frame_21.setFrameShape(QFrame.StyledPanel)
+        self.frame_21.setFrameShadow(QFrame.Raised)
+        self.pushButton_7 = QPushButton(self.frame_21)
+        self.pushButton_7.setObjectName(u"pushButton_7")
+        self.pushButton_7.setGeometry(QRect(440, 38, 131, 31))
+        self.pushButton_7.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_7.setStyleSheet(u"QPushButton{\n"
+"	border: transparent;\n"
+"	background-color: transparent;\n"
+"	font-size: 22px;\n"
+"	font-weight: bold;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"		color: rgb(61, 21, 21);\n"
+"}\n"
+"")
+        self.pushButton_8 = QPushButton(self.frame_21)
+        self.pushButton_8.setObjectName(u"pushButton_8")
+        self.pushButton_8.setGeometry(QRect(640, 38, 131, 31))
+        self.pushButton_8.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_8.setStyleSheet(u"QPushButton{\n"
+"	border: transparent;\n"
+"	background-color: transparent;\n"
+"	font-size: 22px;\n"
+"	font-weight: bold;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(61, 21, 21);\n"
+"}")
         self.frame_2.raise_()
         self.frame.raise_()
-        self.pushButton_10.raise_()
+        self.frame_21.raise_()
         self.frame_22.raise_()
+        self.pushButton_10.raise_()
 
         self.retranslateUi(Dialog)
 
@@ -543,13 +610,6 @@ class Ui_Dialog(object):
         self.label_3.setText(QCoreApplication.translate("Dialog", u"SUB TOTAL:", None))
         self.pushButton.setText(QCoreApplication.translate("Dialog", u"FINALIZE ORDER", None))
         self.label_4.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p align=\"center\">YOUR ORDER</p></body></html>", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("Dialog", u"Traditional Espresso", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("Dialog", u"Double Espresso", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("Dialog", u"Macchiato", None))
-        self.comboBox.setItemText(3, QCoreApplication.translate("Dialog", u"Espresso Romano", None))
-        self.comboBox.setItemText(4, QCoreApplication.translate("Dialog", u"Doppio", None))
-        self.comboBox.setItemText(5, QCoreApplication.translate("Dialog", u"Ristretto", None))
-
         self.label_5.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:8pt;\">Traditional Espresso - 300g</span></p></body></html>", None))
         self.label_6.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:8pt;\">R$ 7.00</span></p></body></html>", None))
         self.label_8.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:8pt;\">R$ 7.00</span></p></body></html>", None))
@@ -562,8 +622,6 @@ class Ui_Dialog(object):
         self.label_14.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:8pt;\">R$ 7.00</span></p></body></html>", None))
         self.label_15.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:8pt;\">Traditional Espresso - 300g</span></p></body></html>", None))
         self.label_16.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:8pt;\">R$ 7.00</span></p></body></html>", None))
-        self.pushButton_7.setText(QCoreApplication.translate("Dialog", u"New Order", None))
-        self.pushButton_8.setText(QCoreApplication.translate("Dialog", u"Payment", None))
         self.label.setText("")
         self.label_2.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:36pt;\">D.W Coffee</span></p></body></html>", None))
         self.pushButton_27.setText("")
@@ -587,5 +645,7 @@ class Ui_Dialog(object):
         self.label_42.setText(QCoreApplication.translate("Dialog", u"New Order", None))
         self.pushButton_15.setText(QCoreApplication.translate("Dialog", u"SETTINGS", None))
         self.pushButton_10.setText("")
+        self.pushButton_7.setText(QCoreApplication.translate("Dialog", u"New Order", None))
+        self.pushButton_8.setText(QCoreApplication.translate("Dialog", u"Payment", None))
     # retranslateUi
 

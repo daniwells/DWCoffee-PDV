@@ -27,10 +27,19 @@ class Database:
                 password varchar(40) NOT NULL,
                 phone int(14),
                 type_user varchar(40) NOT NULL
-            )"""
+            );"""
         )
- 
-    
+
+    def create_table_coffee(self):
+        self.cursor.execute(
+            """CREATE TABLE IF NOT EXISTS coffee(
+                id_coffee INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                name_coffee varchar(255) NOT NULL,
+                price FLOAT NOT NULL,
+                litters FLOAT NOT NULL
+            );"""
+        )
+        
     def register_user(self, fullDataSet):
         buys_table = ('fullname','name_company','cnpj','password','type_user')
         qntd = ("?, ?, ?, ?, ?")
@@ -44,16 +53,35 @@ class Database:
             return "DEU BOM!!"
         except: 
             return "DEU RUIM!!"
+        
+    def register_coffee(self, fullDataSet):
+        # try:
+        self.cursor.execute(
+        f"""
+            INSERT INTO coffee (name_coffee, price, litters) VALUES (?,?,?)  
+        """, fullDataSet)
+        self.connection.commit()
+            # return "DEU BOM!!"
+        # except: 
+            # return "DEU RUIM!!"
 
-
-    def select_all_livros(self):
+    def select_all_coffee(self):
         try:
-            cursor = self.connection.cursor()
-            cursor.execute("SELECT * FROM livros ORDER BY TITULO")
-            livros = cursor.fetchall() # traz todos os dados que encontrar de livros
-            return livros
+            self.cursor.execute("SELECT * FROM coffee ORDER BY name_coffee")
+            coffee = self.cursor.fetchall() 
+            return coffee
         except:
             pass
+
+
+    # def select_all_livros(self):
+    #     try:
+    #         cursor = self.connection.cursor()
+    #         cursor.execute("SELECT * FROM livros ORDER BY TITULO")
+    #         livros = cursor.fetchall() # traz todos os dados que encontrar de livros
+    #         return livros
+    #     except:
+    #       pass
 
     # def buscar_livros(self):
     #     db = Data_base()
@@ -70,3 +98,18 @@ class Database:
  
     #     db.close_connection()
 
+if __name__ == "__main__":
+    db = Database()
+    db.connect()
+    #db.create_table_coffee()
+
+    name_coffee = input("Enter the coffee name: ")
+    price = float(input("Enter the price of the coffee: "))
+    litters = float(input("Enter the litters of the coffee: "))
+
+    fulldataset = (
+        name_coffee, price, litters
+    )
+
+    db.register_coffee(fulldataset)
+    # print(response)

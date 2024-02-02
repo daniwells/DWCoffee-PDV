@@ -16,11 +16,16 @@ class Order(QMainWindow, orderPage.Ui_Dialog):
         self.setupUi(self)
         self.setWindowTitle("Order Page")
         self.pushButton_10.clicked.connect(self.openMenu)
+        self.addComboBoxCoffee()
+
+        #Buttons Coffee --------------------------------------------------------
+
+        
 
     def openMenu(self):
         start_geometry = self.frame_22.geometry()
         
-        if start_geometry.getRect() == (0, 141, 111, 631):
+        if start_geometry.getRect() == (0, 141, 111, 641):
             end_geometry = start_geometry.translated(-120, 0)
         else:
             end_geometry = start_geometry.translated(120, 0)
@@ -37,7 +42,7 @@ class Order(QMainWindow, orderPage.Ui_Dialog):
     def moveBottomMenu(self):
         start_geometry = self.pushButton_10.geometry()
         
-        if start_geometry.getRect() == (110, 140, 16, 631):
+        if start_geometry.getRect() == (110, 140, 16, 641):
             end_geometry = start_geometry.translated(-112, 0)
         else:
             end_geometry = start_geometry.translated(112, 0)
@@ -49,8 +54,21 @@ class Order(QMainWindow, orderPage.Ui_Dialog):
         self.animation2.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
         self.animation2.start()
 
-        
-        
+    def addComboBoxCoffee(self):
+        db = Database()
+        db.connect()
+
+        listCoffee = db.select_all_coffee()
+
+        for item in listCoffee:
+            name_coffe = item[1]
+            self.comboBox.addItem(name_coffe)
+
+    def addToKart(self, name, price):
+        item = f"{name}     {price}"
+
+        self.listWidget.addItem(item)
+    
         
 
 class Login(QMainWindow, login.Ui_Dialog):
